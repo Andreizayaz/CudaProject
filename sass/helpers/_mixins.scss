@@ -1,0 +1,39 @@
+@mixin flex_row_wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin centerUppercase {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin border_bottom_block {
+    width: 10%;
+    margin: 0 auto;
+    border-bottom: 4px solid;
+}
+
+@mixin extra-small {
+    @media(max-width: $screen-small - 1px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media(min-width: $screen-small) and (max-width: $screen-medium - 1px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media(min-width: $screen-medium) and (max-width: $screen-large - 1px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media(min-width: $screen-large) and (max-width: $screen-ex-large - 1px) {
+        @content;
+    }
+}

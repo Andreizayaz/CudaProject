@@ -1,0 +1,213 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.review {
+    background-color: $reviewsSectionBackgroundColor;
+    color: $reviewsSeactionCommonColor;
+}
+
+.review-about-us {
+    padding: 120px 0;
+
+    @include medium {
+        padding: 100px 0;
+    }
+
+    @include small {
+        padding: 40px;
+    }
+
+    @include extra-small {
+        padding: 10px;
+    }
+
+    h1.headline {
+        padding-bottom: 20px;
+        @include centerUppercase;
+        color: $reviewsSeactionHeadlineColor;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+
+        @include medium {
+            font-size: 2.3em;
+            letter-spacing: 2.5px;
+        }
+
+        @include small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+        }
+
+        @include extra-small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+            padding: 10px;
+        }
+    }
+
+    .border {
+        @include border_bottom_block;
+        border-bottom-color: #000;
+        opacity: .15;
+
+        @include small {
+            width: 20%;
+        }
+
+        @include extra-small {
+            width: 25%;
+        }
+    }
+
+    p.text {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 60px;
+        text-align: center;
+        font-size: 1, 125em;
+        line-height: 1.44;
+        letter-spacing: .36px;
+
+        @include medium {
+            font-size: 1.4em;
+        }
+
+        @include small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+            margin: 0 auto;
+        }
+
+        @include extra-small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+            margin: 0 auto;
+        }
+    }
+
+    .reviews-list {
+        @include flex_row_wrap;
+        justify-content: space-between;
+
+        @include large {
+            padding: 0 20px;
+        }
+
+        .review-item {
+            width: 45%;
+            padding-bottom: 136px;
+            @include flex_row_wrap;
+            justify-content: flex-start;
+
+            @include extra-small {
+                display: inline-block;
+            }
+
+            @include small {
+                width: 50%;
+                padding-bottom: 50px;
+                display: inline-block;
+            }
+
+            @include extra-small {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            .photo {
+                width: 90px;
+                height: 90px;
+                margin-right: 45px;
+                background-color: #787878;
+                border-radius: 50%;
+
+                @include medium {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+
+                @include small {
+                    margin: 10px 0;
+                }
+
+                @include extra-small {
+                    margin: 10px auto;
+                }
+            }
+
+            .review-content {
+                width: 65%;
+                text-align: left;
+
+                @include medium {
+                    padding-right: 10px;
+                }
+
+                @include small {
+                    width: 80%;
+                }
+
+                @include extra-small {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                p.review-text {
+                    font-size: 1.31em;
+                    font-style: italic;
+                    line-height: 1.49;
+                    letter-spacing: .35px;
+                    padding-bottom: 28px;
+
+                    @include medium {
+                        font-size: 1.4em;
+                    }
+
+                    @include small {
+                        font-size: 1.1em;
+                        line-height: 1.35;
+                        padding-bottom: 20px;
+                    }
+                }
+
+                p.reviewer-name {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    letter-spacing: .48px;
+                    padding-bottom: 10px;
+
+                    @include small {
+                        font-size: 1.45em;
+                    }
+                }
+
+                p.reviewer-position {
+                    color: $reviewsSeactionReviewerOccupationColor;
+                    font-size: 1.125em;
+                    line-height: 1.44;
+                    letter-spacing: .36px;
+
+                    @include medium {
+                        font-size: 1.3em;
+                    }
+
+                    @include small {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+
+        .review-item:nth-child(n+3) {
+            padding-bottom: 0;
+
+            @include extra-small {
+                padding-bottom: 50px;
+            }
+        }
+    }
+}

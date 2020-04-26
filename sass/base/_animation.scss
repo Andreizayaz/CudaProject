@@ -1,0 +1,152 @@
+/*@keyframes logo_start {
+    from {
+        transform: rotate(0) scale(.5);
+        left: 120%;
+    }
+
+    50% {
+        transform: rotate(-720deg) scale(1.5);
+        left: 0;
+    }
+
+    to {
+        transform: rotate(0) scale(1);
+    }
+}*/
+
+@keyframes logo_hover {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@mixin menu_item_color($color_start, $color_end) {
+    @keyframes menu_item {
+        from {
+            background-color: $color_start;
+        }
+
+        to {
+            background-color: $color_end;
+        }
+    }
+
+    animation: menu_item 1s forwards;
+}
+
+@mixin button_color($color_start, $color_end) {
+    @keyframes button_color {
+        from {
+            background-color: $color_start;
+        }
+
+        to {
+            background-color: $color_end;
+            box-shadow: -4px 4px 20px #000;
+        }
+    }
+
+    animation: button_color 1s forwards;
+}
+
+/*@keyframes flag_rotate {
+    from {
+        transform: rotate(0);
+    }
+
+
+    25% {
+        transform: rotate(-45deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    25% {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+
+
+}*/
+
+@keyframes flag_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    25%,
+    75% {
+        transform: rotate(-45deg);
+    }
+
+    50%,
+    100% {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes pencil_draw {
+    from {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(-20px);
+    }
+
+    50%,
+    100% {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes gears_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rocket_move {
+    from {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(45px, -45px)
+            /*rotate(720deg)*/
+        ;
+
+    }
+
+
+
+    to {
+        transform: translate(0);
+    }
+}

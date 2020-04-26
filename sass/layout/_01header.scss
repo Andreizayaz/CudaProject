@@ -1,0 +1,146 @@
+@import "../helpers/variables";
+@import"../helpers/mixins";
+@import "../base/animation";
+
+header {
+    background-color: $headerBackgroundColor;
+    color: $headerCommonColor;
+}
+
+header {
+    .section {
+        padding: 50px 20px 147px 40px;
+
+        @include large {
+            padding-bottom: 100px;
+        }
+
+        @include medium {
+            padding-bottom: 80px;
+        }
+
+        @include small {
+            padding: 40px;
+        }
+
+        @include extra-small {
+            padding: 10px;
+        }
+    }
+
+    nav {
+        @include flex_row_wrap;
+
+        @include small {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .logo {
+            display: block;
+            margin-right: auto;
+            transition-duration: 2s;
+
+            @include small {
+                margin: 0 auto;
+            }
+
+            @include extra-small {
+                margin: 0 auto;
+            }
+
+            &:hover {
+                /*animation: logo_hover 2s;*/
+                transform: scale(1.5);
+            }
+        }
+
+        .navigation {
+            @include flex_row_wrap;
+            justify-content: space-between;
+            max-width: 450px;
+
+            @include small {
+                margin: 30px auto;
+            }
+
+            @include extra-small {
+                margin: 20px auto;
+            }
+
+            a {
+                display: inline-block;
+                padding: 10px;
+                background-color: transparent;
+                transition-duration: 2s;
+
+                @include small {
+                    width: 30%;
+                    font-size: 1.3em;
+                    padding: 10px 0;
+                    text-align: center;
+                }
+
+                @include extra-small {
+                    width: 80%;
+                    margin: 0 auto;
+                    font-size: 1.3em;
+                    padding: 10px 0;
+                    text-align: center;
+                }
+
+                &:hover {
+                    background-color: #643a79;
+                    /*@include menu_item_color(#fff, #643a79);
+                    animation-duration: 2s;*/
+                }
+            }
+        }
+    }
+
+    p {
+        margin: 147px 97px 67px 97px;
+        font-weight: bold;
+        font-size: 2.63em;
+        text-align: center;
+        color: $headerHeadlineColor;
+
+        @include large {
+            margin-top: 100px;
+        }
+
+        @include medium {
+            margin-top: 80px;
+            font-size: 1.9em;
+        }
+
+        @include small {
+            margin: 0;
+            margin-bottom: 40px;
+            padding-top: 10px;
+            font-size: 1.8em;
+        }
+
+        @include extra-small {
+            margin: 0;
+            padding: 10px;
+            margin-bottom: 40px;
+            padding-top: 10px;
+            font-size: 1.5em;
+        }
+    }
+
+    a.button {
+        background-color: $headerButtonBackgroundColor;
+        transition-duration: 1s;
+
+        &:hover {
+            background-color: #17c2a4;
+            box-shadow: -4px 4px 20px #000;
+            /*@include button_color($headerButtonBackgroundColor, #17c2a4);*/
+
+        }
+    }
+
+
+}

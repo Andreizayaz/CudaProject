@@ -1,0 +1,207 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+/*-------- Section Portfolio --------*/
+
+.portfolio {
+    background-color: $portfolioSectionBackgroundColor;
+    color: $portfolioSeactionCommonColor;
+}
+
+.portfolio-section {
+    padding: 118px 0;
+
+    @include medium {
+        padding: 100px 0;
+    }
+
+    @include small {
+        padding: 40px;
+    }
+
+    @include extra-small {
+        padding: 10px;
+    }
+
+    h1.headline {
+        @include centerUppercase;
+        color: $portfolioSeactionHeadlineColor;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+
+        @include medium {
+            font-size: 2.3em;
+            letter-spacing: 2.5px;
+        }
+
+        @include small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+        }
+
+        @include extra-small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+            padding: 10px;
+        }
+    }
+
+    .border {
+        @include border_bottom_block;
+        border-color: $portfoliosSeactionBorderColor;
+        margin: 20px auto;
+
+        @include small {
+            width: 20%;
+        }
+
+        @include extra-small {
+            width: 25%;
+            margin-top: 10px;
+        }
+    }
+
+    p.text {
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.125em;
+        line-height: 1.44;
+        letter-spacing: .36px;
+
+        @include medium {
+            width: 60%;
+            font-size: 1.4em;
+        }
+
+        @include small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+        }
+
+        @include extra-small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+        }
+    }
+
+    .navigation {
+        @include flex_row_wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding-top: 42px;
+        padding-bottom: 65px;
+        width: 50%;
+
+        @include small {
+            width: 80%;
+        }
+
+        @include extra-small {
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            width: 23%;
+            padding: 10px 0;
+            background-color: $portfolioSectionButtonBackgroundColor;
+            @include centerUppercase;
+            font-size: 1.125em;
+            letter-spacing: .36px;
+            border-radius: 5px;
+            transition-duration: 1s;
+
+            @include small {
+                font-size: 1.1em;
+            }
+
+            @include extra-small {
+                display: inline-block;
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    .portfolio-list {
+        @include flex_row_wrap;
+        justify-content: space-around;
+
+        @include extra-small {
+            padding-bottom: 15px;
+        }
+
+        .portfolio-item {
+            width: 45%;
+            text-align: center;
+            padding-bottom: 55px;
+
+            @include small {
+                padding-bottom: 35px;
+            }
+
+            @include extra-small {
+                width: 100%;
+                padding-bottom: 45px;
+            }
+
+            figure {
+                transition-duration: 1s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: #fff;
+                }
+
+                img {
+                    max-width: 100%;
+                    padding-bottom: 30px;
+
+                    @include small {
+                        width: 120%;
+                        padding-bottom: 15px;
+                    }
+
+                    @include extra-small {
+                        padding-bottom: 15px;
+                    }
+                }
+
+                figcaption {
+                    text-transform: uppercase;
+                    font-size: 1.125em;
+                    letter-spacing: .36px;
+
+                    @include small {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .link {
+        background-color: #17c2a4;
+        font-size: 1.125em;
+        letter-spacing: .27px;
+        color: $portfolioSeactionButtonLinkColor;
+        transition-duration: 1s;
+
+        @include small {
+            font-size: 1.1em;
+        }
+
+        &:hover {
+            background-color: #d74680;
+            box-shadow: -4px 4px 20px #000;
+        }
+    }
+
+}

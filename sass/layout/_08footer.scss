@@ -1,0 +1,53 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+footer {
+    background-color: $footerBackgroundColor;
+    color: $footerCommonColor;
+
+    .navigation {
+        @include flex_row_wrap;
+        justify-content: space-around;
+        padding: 10px;
+        padding-top: 48px;
+        padding-bottom: 41px;
+
+        @include small {
+            padding: 20px 10px;
+        }
+
+        @include extra-small {
+            padding: 20px 10px;
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            text-transform: none;
+            font-size: 1.5em;
+            letter-spacing: .48px;
+            transition-duration: 1s;
+
+            @include medium {
+                font-size: 1.4em;
+            }
+
+            @include small {
+                font-size: 1em;
+                padding: 5px;
+            }
+
+            @include extra-small {
+                width: 100%;
+                font-size: 1.4em;
+                text-align: center;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                color: #30bae7;
+            }
+        }
+    }
+}

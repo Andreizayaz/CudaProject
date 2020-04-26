@@ -1,0 +1,177 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+/*-------- Section Skills --------*/
+
+.skills {
+    background-color: $skillsSectionBackgroundColor;
+    color: $skillsSeactionCommonColor;
+}
+
+.team-skills {
+    padding: 114px 0;
+
+    @include medium {
+        padding: 100px 0;
+    }
+
+    @include small {
+        padding: 40px;
+    }
+
+    @include extra-small {
+        padding: 10px;
+    }
+
+    h1.team-skills-headline {
+        @include centerUppercase;
+        color: $skillsSeactionHeadlineColor;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+
+        @include medium {
+            font-size: 2.3em;
+            letter-spacing: 2.5px;
+        }
+
+        @include small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+        }
+
+        @include extra-small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+            padding: 10px;
+        }
+    }
+
+    .border {
+        @include border_bottom_block;
+        padding-top: 19px;
+        border-color: $skillssSeactionBorderColor;
+
+        @include small {
+            width: 20%;
+        }
+
+        @include extra-small {
+            width: 25%;
+        }
+    }
+
+    p.text {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 19px;
+        padding-bottom: 68px;
+        text-align: center;
+        font-size: 1.125em;
+        line-height: 1.44;
+        letter-spacing: .36px;
+
+        @include medium {
+            width: 60%;
+            font-size: 1.4em;
+        }
+
+        @include small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+        }
+
+        @include extra-small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+            padding-bottom: 50px;
+        }
+    }
+
+    .skills-list {
+        @include flex_row_wrap;
+        justify-content: space-around;
+
+        .skill-item {
+
+            @include small {
+                width: 45%;
+                padding-bottom: 50px;
+            }
+
+            @include extra-small {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            .round-block {
+                width: 160px;
+                height: 160px;
+                border: 12px solid #30bae7;
+                border-radius: 50%;
+                margin: 0 auto;
+
+                @include small {
+                    width: 130px;
+                    height: 130px;
+                }
+
+                p.percent-skill {
+                    font-size: 3.125em;
+                    @include centerUppercase;
+                    letter-spacing: .86px;
+                    margin: 25% auto;
+
+                    @include small {
+                        font-size: 3em;
+                        margin: 20% auto;
+                    }
+
+                    span {
+                        font-size: 2rem;
+                        letter-spacing: .55px;
+
+                        @include small {
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+            }
+
+            p.skill-name {
+                padding-top: 30px;
+                @include centerUppercase;
+                font-size: 1.5em;
+                font-weight: bold;
+                letter-spacing: .48px;
+
+                @include small {
+                    font-size: 1.45em;
+                }
+
+                @include extra-small {
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        .skill-item:nth-child(2) {
+            .round-block {
+                border-color: #d74680;
+            }
+        }
+
+        .skill-item:nth-child(3) {
+            .round-block {
+                border-color: #15c7a8;
+            }
+        }
+
+        .skill-item:nth-child(4) {
+            .round-block {
+                border-color: #eb7d4b;
+            }
+        }
+    }
+}

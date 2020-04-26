@@ -1,0 +1,55 @@
+@import "../fonts_sass/all_fonts";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+body {
+    font-family: "Titillium Web", Roboto, Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include extra-small {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.button {
+    display: block;
+    padding: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125em;
+    width: 30%;
+    border-radius: 10px;
+
+    @include small {
+        width: 50%;
+        padding: 1.1em;
+        font-size: 1.1em;
+    }
+
+    @include extra-small {
+        width: 80%;
+        padding: 1.1em;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+}

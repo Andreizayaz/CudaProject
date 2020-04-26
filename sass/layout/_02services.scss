@@ -1,0 +1,171 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../base/animation";
+
+.services {
+    background-color: $servicesSectionBackgroundColor;
+    color: $serviceSeactionCommonColor;
+}
+
+
+.services {
+    .section-services {
+        padding: auto;
+        padding-top: 119px;
+
+        @include medium {
+            padding-top: 95px;
+        }
+
+        @include small {
+            padding: 40px;
+        }
+
+        @include extra-small {
+            padding: 10px;
+        }
+    }
+
+    h1.headline {
+        @include centerUppercase;
+        font-size: 2.5em;
+        letter-spacing: 5px;
+        padding-bottom: 20px;
+
+        @include medium {
+            font-size: 2.3em;
+            letter-spacing: 2.5px;
+        }
+
+        @include small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+        }
+
+        @include extra-small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+            padding: 10px;
+        }
+    }
+
+    .border {
+        @include border_bottom_block;
+        border-bottom-color: $serviceSeactionBorderColor;
+        opacity: 0.15;
+
+        @include small {
+            width: 20%;
+        }
+
+        @include extra-small {
+            width: 25%;
+        }
+    }
+
+    p {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 26px;
+        padding-bottom: 55px;
+        font-size: 1.125em;
+        text-align: center;
+        line-height: 1.45;
+
+        @include medium {
+            font-size: 1.4em;
+        }
+
+        @include small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+        }
+
+        @include extra-small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+        }
+    }
+
+    .items-list {
+        @include flex_row_wrap;
+        justify-content: space-around;
+    }
+
+    .service-item {
+        width: 25%;
+        text-align: center;
+
+        @include medium {
+            width: 23%;
+        }
+
+        @include small {
+            width: 45%;
+        }
+
+        @include extra-small {
+            width: 100%;
+        }
+
+        /*img {
+            @include small {
+                width: 45%;
+            }
+
+        }*/
+
+        h2 {
+            @include centerUppercase;
+            font-size: 1.5em;
+            letter-spacing: .5px;
+            padding-top: 44px;
+
+            @include small {
+                font-size: 1.45em;
+            }
+
+            @include extra-small {
+                font-size: 1.45em;
+            }
+        }
+
+        p {
+            font-size: 1em;
+            letter-spacing: .32px;
+            padding-top: 15px;
+            padding-bottom: 110px;
+
+            @include medium {
+                font-size: 1.4em;
+            }
+
+            @include small {
+                font-size: 1.1em;
+            }
+
+            @include extra-small {
+                font-size: 1.1em;
+                padding-bottom: 70px;
+            }
+        }
+
+        img[title="Flag"]:hover {
+            animation: flag_rotate 5s;
+        }
+
+        img[title="Pencil"]:hover {
+            animation: pencil_draw 5s;
+        }
+
+        img[title="Gears"]:hover {
+            animation: gears_rotate 5s;
+        }
+
+        img[title="Rocket"]:hover {
+            animation: rocket_move 5s;
+        }
+    }
+}

@@ -1,0 +1,189 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+/*------Form Section--------*/
+.form-contact {
+    background-color: $formSectionBackgroundColor;
+    color: $formSeactionCommonColor;
+}
+
+.form-contact-section {
+    padding: 115px 120px;
+    text-align: center;
+
+    @include medium {
+        padding: 100px;
+    }
+
+    @include small {
+        padding: 40px;
+    }
+
+    @include extra-small {
+        padding: 10px;
+    }
+
+    h1.headline {
+        padding-bottom: 20px;
+        @include centerUppercase;
+        color: $formSeactionHeadlineColor;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+
+        @include medium {
+            font-size: 2.3em;
+            letter-spacing: 2.5px;
+        }
+
+        @include small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+        }
+
+        @include extra-small {
+            font-size: 1.8em;
+            letter-spacing: 1.5px;
+            padding: 10px;
+        }
+    }
+
+    .border {
+        @include border_bottom_block;
+        border-bottom-color: $formsSeactionBorderColor;
+
+        @include small {
+            width: 20%;
+        }
+
+        @include extra-small {
+            width: 25%;
+        }
+    }
+
+    p.text {
+        padding-top: 20px;
+        padding-bottom: 76px;
+        font-size: 1.125em;
+        line-height: 1.44;
+        letter-spacing: .36px;
+
+        @include medium {
+            font-size: 1.4em;
+        }
+
+        @include small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+            margin: 0 auto;
+        }
+
+        @include extra-small {
+            width: 80%;
+            font-size: 1.25em;
+            line-height: 1.35;
+            margin: 0 auto;
+        }
+    }
+
+    form {
+
+        input[type="text"],
+        textarea,
+        ::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            font-size: 1.125em;
+            line-height: 1;
+            color: $formSeactionCommonColor;
+            font-family: "Titillium Web", Roboto, Arial, sans-serif !important;
+            background-color: #273a71;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        ::-webkit-input-placeholder::after,
+        textarea::-webkit-input-placeholder::after {
+            content: ' \002A';
+            color: #db424b;
+            padding: 15px;
+            padding-left: 5px;
+        }
+
+
+
+        .text-dataes {
+            @include flex_row_wrap;
+            justify-content: space-around;
+
+            @include small {
+                display: inline-block;
+            }
+
+            @include extra-small {
+                display: inline-block;
+            }
+
+            input[type="text"] {
+                width: 45%;
+
+                @include small {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                @include extra-small {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            textarea {
+                width: 95%;
+                margin-top: 27px;
+                margin-bottom: 60px;
+
+                @include small {
+                    width: 100%;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+                @include extra-small {
+                    width: 100%;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+            }
+
+            input[type="text"]:focus::-webkit-input-placeholder,
+            textarea:focus::-webkit-input-placeholder {
+                color: transparent;
+            }
+
+            input[type="text"]:focus,
+            textarea:focus {
+                border: 2px solid #ffdd99;
+                background-color: #a75978;
+
+            }
+        }
+
+        input[type="submit"] {
+            @include centerUppercase;
+            background-color: #30bae7;
+            color: $formSeactionCommonColor;
+            border: none;
+            transition-duration: 1s;
+            align-items: center;
+            white-space: normal;
+            word-wrap: break-word;
+
+            &:hover {
+                background-color: #a75978;
+                box-shadow: -4px 4px 20px #000;
+                cursor: pointer;
+            }
+        }
+    }
+}
